@@ -1,0 +1,29 @@
+.nav-bar {
+  background-color: #4056A1;
+  color: #FFFFFF;
+  font-size: 32px;
+  font-family: 'Bungee', sans-serif;
+  height: 120px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.page-name {
+  margin-left: 1.5em;
+}
+
+.righthand-menu {
+  margin-right: 1.5em;
+  font-family: sans-serif;
+  font-size: 22px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.symbol-color {
+  color: red;
+}
