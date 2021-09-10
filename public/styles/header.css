@@ -1,0 +1,9 @@
+header {
+  height: 400px;
+  background-image:url('../images/az-subtle.png');
+  background-color: gold;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
