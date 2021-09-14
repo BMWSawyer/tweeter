@@ -28,3 +28,7 @@ textarea {
   resize: none;
   height: 50px;
 }
+
+.new-tweet .form-submission .non-valid {
+  color: red;
+}
