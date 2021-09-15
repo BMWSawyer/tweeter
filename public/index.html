@@ -16,6 +16,9 @@
     <!-- Adding link to Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+    <!-- Adding link to Timeago -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js" integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
     <!-- App CSS -->
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
 
@@ -27,6 +30,9 @@
 
     <!-- CSS for New Tweets -->
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+
+    <!-- CSS for Past Tweets -->
+    <link rel="stylesheet" href="/styles/past-tweets.css" type="text/css" />
 
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -48,7 +54,7 @@
         <i class="fas fa-angle-double-down symbol-color"></i>
       </span>
     </nav>
-    <header>
+    <header class="profile">
       <div>
           <img src="/images/profile-hex.png"> 
       </div>
@@ -67,9 +73,31 @@
           <textarea name="text" id="tweet-text"></textarea>
           <div class="form-submission">
             <button type="submit">Tweet</button>
-            <output name="counter" class="counter valid" for="tweet-text"></output>
+            <output name="counter" class="counter" for="tweet-text"></output>
           </div>
         </form>
+      </section>
+      <section class="past-tweets">
+        <article>
+          <header>
+            <div class="user">
+              <div class="person">
+                <img class="avatar" src="https://i.imgur.com/73hZDYK.png">
+                <p class="name">Newton</p>
+              </div>
+              <p class="handle">@SirIssac</p>
+            </div>
+            <p>If I have seen further it is by standing on the shoulders of giants</p>  
+          </header>
+          <footer>
+            <span class="date-time" style="margin-left: 10px;"></span>
+            <div class="icons">
+              <i class="fas fa-flag icon"></i>
+              <i class="fas fa-retweet icon"></i>
+              <i class="fas fa-heart icon"></i>
+            </div>
+          </footer>
+        </article>
       </section>
     </main>
   </body>
