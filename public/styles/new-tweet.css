@@ -6,6 +6,7 @@
 .new-tweet form {
   display: flex;
   flex-direction: column;
+  margin-bottom: 20px;
 }
 
 .form-submission {
