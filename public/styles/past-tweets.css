@@ -1,0 +1,62 @@
+.past-tweets article {
+  border: 5px solid grey;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  padding: 0px 7px 10px 7px;
+}
+
+.past-tweets article:hover {
+  box-shadow: 5px 5px lightsteelblue;;
+}
+
+.past-tweets article header .user {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.past-tweets article header .person {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.past-tweets article header {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.past-tweets article footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-top: 5px solid grey;
+  padding-top: 10px;
+}
+
+.icons {
+  color: #4056A1;
+  margin-right: 10px;
+}
+
+.icon:hover {
+  color: gold;
+}
+
+.name {
+  margin-left: 15px;
+}
+
+.handle {
+  color: cornflowerblue;
+}
+
+.handle:hover {
+  font-weight: 600;
+  color: rgb(46, 100, 199);
+}
+
+.avatar {
+  height: 40px;
+  width: 40px;
+}
