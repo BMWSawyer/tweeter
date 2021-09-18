@@ -73,4 +73,31 @@ $(document).ready(function() {
   
   renderTweets(data);
 
+  $('.form').on( 'submit', function( event ) {
+    event.preventDefault();
+    const serializedData = $(this).serialize();
+    console.log(serializedData);
+
+    $.post('/tweets', serializedData)
+      .then((response) => {
+        console.log(response);
+      })
+      .then((error) => {
+        console.log(error);
+      })
+  });
+  
+/*
+  const fetchPosts = $.ajax({
+    url: "",
+    method: "GET",
+    dataType: "json",
+    success: (tweets) => {
+      console.log(tweets)
+    },
+    error: (error) => {
+      console.log(error)
+    }
+  });
+*/
 });
