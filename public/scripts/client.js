@@ -20,7 +20,7 @@ $(document).ready(function() {
     
     let dateTime = timeago.format(tweet['created_at']);
     
-    
+
     const $tweet = $(`
       <article>
         <header>
@@ -48,11 +48,15 @@ $(document).ready(function() {
   };
   
 
-  $('.form').on( 'submit', function( event ) {
+  $('.form').on('submit', function( event ) {
     event.preventDefault();
     const serializedData = $(this).serialize();
-    console.log(serializedData);
-
+    //console.log(serializedData);
+    if ($('#tweet-text').val() === "" || $('#tweet-text').val() === null) {
+      alert("You canot post a blank tweet. We want to hear what you're thinking!");
+    } else if ($('#tweet-text').val().length > 140) {
+      alert("Your tweet has too many characters. Tweet again with less than 140 characters!");
+    } else {
     $.post('/tweets', serializedData)
       .then((response) => {
         console.log(response);
@@ -60,6 +64,7 @@ $(document).ready(function() {
       .then((error) => {
         console.log(error);
       })
+    }
   });
 
   const loadTweets = $.ajax({
