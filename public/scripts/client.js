@@ -4,22 +4,31 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 $(document).ready(function() {
-  
+
   const renderTweets = function(tweets) {
     // loops through tweets
     // calls createTweetElement for each tweet
     // takes return value and appends it to the tweets container
+    $('.past-tweets').empty();
 
     for (const tweet of tweets) {
       const $result = createTweetElement(tweet);
-      $('.past-tweets').append($result); // to add it to the page so we can make sure it's got all the right elements, classes, etc.
+      $('.past-tweets').prepend($result); // to add it to the page so we can make sure it's got all the right elements, classes, etc.
     }
   }
   
   const createTweetElement = function(tweet) {
     
     let dateTime = timeago.format(tweet['created_at']);
-    
+    const textFromUser = tweet['content'].text;
+
+    const escape = function (str) {
+      let div = document.createElement("div");
+      div.appendChild(document.createTextNode(str));
+      return div.innerHTML;
+    };
+
+    const safeHTML = `<p>${escape(textFromUser)}</p>`;
 
     const $tweet = $(`
       <article>
@@ -31,7 +40,7 @@ $(document).ready(function() {
             </div>
             <p class="handle">${tweet['user'].handle}</p>
           </div>
-          <p>${tweet['content'].text}</p>  
+          ${safeHTML} 
         </header>
         <footer>
           <span class="date-time" style="margin-left: 10px;">${dateTime}</span>
@@ -43,7 +52,7 @@ $(document).ready(function() {
         </footer>
       </article>
     `);
-  
+    
     return $tweet;
   };
   
@@ -51,7 +60,7 @@ $(document).ready(function() {
   $('.form').on('submit', function( event ) {
     event.preventDefault();
     const serializedData = $(this).serialize();
-    //console.log(serializedData);
+    
     if ($('#tweet-text').val() === "" || $('#tweet-text').val() === null) {
       alert("You canot post a blank tweet. We want to hear what you're thinking!");
     } else if ($('#tweet-text').val().length > 140) {
@@ -59,7 +68,9 @@ $(document).ready(function() {
     } else {
     $.post('/tweets', serializedData)
       .then((response) => {
-        console.log(response);
+        loadTweets();
+        $('#tweet-text').val("");
+        $('.counter').val(140);
       })
       .then((error) => {
         console.log(error);
@@ -67,7 +78,7 @@ $(document).ready(function() {
     }
   });
 
-  const loadTweets = $.ajax({
+  const loadTweets = () => { $.ajax({
     url: "/tweets",
     method: "GET",
     dataType: "json",
@@ -77,7 +88,7 @@ $(document).ready(function() {
     error: (error) => {
       console.log(error)
     }
-  });
+  })};
 
   loadTweets();
 
