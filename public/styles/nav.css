@@ -30,4 +30,25 @@
 
 .symbol-color {
   color: red;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  transform-origin: bottom;
+}
+
+.righthand-menu:hover {
+  color: gold;
+}
+
+.symbol-color:hover {
+  font-size: 1.3em;
+}
+
+.bounce {
+  animation-name: bounce;
+  animation-timing-function: ease;
+}
+@keyframes bounce {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(4px); }
+  100% { transform: translateY(0); }
 }
