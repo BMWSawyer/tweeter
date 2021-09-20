@@ -33,3 +33,14 @@ textarea {
 .new-tweet .form-submission .non-valid {
   color: red;
 }
+
+#error-alerts {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 40px; 
+  border: 5px solid red;
+  padding: 10px 10px 10px 30px;
+  color: red;
+}
