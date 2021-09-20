@@ -55,17 +55,22 @@ $(document).ready(function() {
     
     return $tweet;
   };
-  
+
+  $("#error-alerts").hide();
 
   $('.form').on('submit', function( event ) {
     event.preventDefault();
     const serializedData = $(this).serialize();
     
     if ($('#tweet-text').val() === "" || $('#tweet-text').val() === null) {
-      alert("You canot post a blank tweet. We want to hear what you're thinking!");
+      $("#error-text").text("You can't post a blank tweet! #tryagain");
+      $("#error-alerts").slideDown();
     } else if ($('#tweet-text').val().length > 140) {
-      alert("Your tweet has too many characters. Tweet again with less than 140 characters!");
+      $("#error-text").text("Your tweet is too long! Plz respect our arbitrary limit of 140 characters. #kthxbye");
+      $("#error-alerts").slideDown();
     } else {
+    $("#error-alerts").slideUp();
+
     $.post('/tweets', serializedData)
       .then((response) => {
         loadTweets();
