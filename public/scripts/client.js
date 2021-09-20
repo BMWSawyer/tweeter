@@ -83,6 +83,10 @@ $(document).ready(function() {
     }
   });
 
+  $('.fa-angle-double-down').on('click', function() {
+    $(".new-tweet").slideToggle();
+  });
+
   const loadTweets = () => { $.ajax({
     url: "/tweets",
     method: "GET",
