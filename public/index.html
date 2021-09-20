@@ -68,6 +68,17 @@
     <main class="container">
       <section class="new-tweet">
         <h2>Compose Tweet</h2>
+        <span id="error-alerts">
+          <i class="fas fa-exclamation-triangle"></i>
+          <p>
+            &nbsp;
+            &nbsp;
+            <p id="error-text"></p>
+            &nbsp;
+            &nbsp;
+          </p>
+          <i class="fas fa-exclamation-triangle"></i>
+        </span>
         <form method="POST" action="/tweets" class="form">
           <label for="tweet-text">What are you humming about?</label>
           <textarea name="text" id="tweet-text"></textarea>
