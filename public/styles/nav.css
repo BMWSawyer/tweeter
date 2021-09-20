@@ -28,6 +28,7 @@
   align-items: center;
 }
 
+/* The code for the bounce animation comes from https://css-tricks.com/making-css-animations-feel-natural/ */
 .symbol-color {
   color: red;
   animation-duration: 2s;
