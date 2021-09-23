@@ -1,6 +1,5 @@
 .nav-bar {
   z-index: 10;
-  background-color: #4056A1;
   color: #FFFFFF;
   font-size: 32px;
   font-family: 'Bungee', sans-serif;
@@ -28,7 +27,7 @@
   align-items: center;
 }
 
-/* The code for the bounce animation comes from https://css-tricks.com/making-css-animations-feel-natural/ */
+/* The code below for the bounce animation comes from https://css-tricks.com/making-css-animations-feel-natural/ */
 .symbol-color {
   color: red;
   animation-duration: 2s;
@@ -48,8 +47,35 @@
   animation-name: bounce;
   animation-timing-function: ease;
 }
+
 @keyframes bounce {
   0%   { transform: translateY(0); }
   50%  { transform: translateY(4px); }
   100% { transform: translateY(0); }
+}
+
+
+  /* Smartphones Responsive Design */
+@media only screen and (max-width: 767px) {
+  
+  .nav-bar {
+    background-image:url('../images/az-subtle.png');
+    background-color: gold;
+  }
+}
+  
+  /* Tablets Responsive Design */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+ 
+  .nav-bar {
+    background-color: #4056A1;
+  }
+}
+  
+  /* Desktops Responsive Design */
+@media only screen and (min-width: 1024px) {
+    
+  .nav-bar {
+    background-color: #4056A1;
+  }
 }
