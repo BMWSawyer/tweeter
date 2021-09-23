@@ -7,11 +7,16 @@ It has provided the opportunity to fork and clone an existing respository and th
 
 ## Final Product
 
-These are three screenshots of the single-page web application in use. The first is the user registration page, the second is the URLs list page, and the third is the individual URL/URL edit page.
+These are eight screenshots of the single-page web application in use.
 
 !["Screenshot of user registration page"]()
 !["Screenshot of user urls page"]()
 !["Screenshot of user url-show/url-edit page"]()
+!["Screenshot of user registration page"]()
+!["Screenshot of user urls page"]()
+!["Screenshot of user url-show/url-edit page"]()
+!["Screenshot of user registration page"]()
+!["Screenshot of user urls page"]()
 
 
 ## Dependencies
