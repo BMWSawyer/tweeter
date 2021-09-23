@@ -7,7 +7,15 @@ It has provided the opportunity to fork and clone an existing respository and th
 
 ## Final Product
 
-These are eight screenshots of the single-page web application in use.
+These are eight screenshots of the single-page web application in use. They are as follows:
+1. The main page of Tweeter app
+2. Compose tweets section hidden using upper righthand moving arrows
+3. Like button becomes highlighted when hovering overtop
+4. Username changes color and font gets bigger when hovering overtop
+5. The character counter is active when typing in the form textarea
+6. Time stamps on each tweet is active
+7. Responsive design for tablets
+8. Responsive design for mobile
 
 !["The main page of Tweeter app"](https://github.com/BMWSawyer/tweeter/blob/master/docs/tweeter_main-page.png?raw=true)
 !["Compose tweets section hidden using upper righthand moving arrows"](https://github.com/BMWSawyer/tweeter/blob/master/docs/tweeter_hidden-compose-tweets.png?raw=true)
