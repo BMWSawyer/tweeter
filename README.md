@@ -9,14 +9,14 @@ It has provided the opportunity to fork and clone an existing respository and th
 
 These are eight screenshots of the single-page web application in use.
 
-!["Screenshot of user registration page"]()
-!["Screenshot of user urls page"]()
-!["Screenshot of user url-show/url-edit page"]()
-!["Screenshot of user registration page"]()
-!["Screenshot of user urls page"]()
-!["Screenshot of user url-show/url-edit page"]()
-!["Screenshot of user registration page"]()
-!["Screenshot of user urls page"]()
+!["The main page of Tweeter app"](https://github.com/BMWSawyer/tweeter/blob/master/docs/tweeter_main-page.png?raw=true)
+!["Compose tweets section hidden using upper righthand moving arrows"](https://github.com/BMWSawyer/tweeter/blob/master/docs/tweeter_hidden-compose-tweets.png?raw=true)
+!["Like button becomes highlighted when hovering overtop"](https://github.com/BMWSawyer/tweeter/blob/master/docs/tweeter_highlighted-like-button.png?raw=true)
+!["Username changes color and font gets bigger when hovering overtop"](https://github.com/BMWSawyer/tweeter/blob/master/docs/tweeter_highlighted-username.png?raw=true)
+!["The character counter is active when typing in the form textarea"](https://github.com/BMWSawyer/tweeter/blob/master/docs/tweeter_active-counter.png?raw=true)
+!["Time stamps on each tweet is active"](https://github.com/BMWSawyer/tweeter/blob/master/docs/tweeter_active-timestamp.png?raw=true)
+!["Responsive design for tablets"](https://github.com/BMWSawyer/tweeter/blob/master/docs/tweeter_tablet-responsive-design.png?raw=true)
+!["Responsive design for mobile"](https://github.com/BMWSawyer/tweeter/blob/master/docs/tweeter_mobile-responsive-design.png?raw=true)
 
 
 ## Dependencies
