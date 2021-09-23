@@ -15,14 +15,14 @@ $(document).ready(function() {
       const $result = createTweetElement(tweet);
       $('.past-tweets').prepend($result); // to add it to the page so we can make sure it's got all the right elements, classes, etc.
     }
-  }
+  };
   
   const createTweetElement = function(tweet) {
     
     let dateTime = timeago.format(tweet['created_at']);
     const textFromUser = tweet['content'].text;
 
-    const escape = function (str) {
+    const escape = function(str) {
       let div = document.createElement("div");
       div.appendChild(document.createTextNode(str));
       return div.innerHTML;
@@ -58,7 +58,7 @@ $(document).ready(function() {
 
   $("#error-alerts").hide();
 
-  $('.form').on('submit', function( event ) {
+  $('.form').on('submit', function(event) {
     event.preventDefault();
     const serializedData = $(this).serialize();
     
@@ -69,17 +69,18 @@ $(document).ready(function() {
       $("#error-text").text("Your tweet is too long! Plz respect our arbitrary limit of 140 characters. #kthxbye");
       $("#error-alerts").slideDown();
     } else {
-    $("#error-alerts").slideUp();
+      $("#error-alerts").slideUp();
 
-    $.post('/tweets', serializedData)
-      .then((response) => {
-        loadTweets();
-        $('#tweet-text').val("");
-        $('.counter').val(140);
-      })
-      .then((error) => {
-        console.log(error);
-      })
+      $.post('/tweets', serializedData)
+        .then(() => {
+          loadTweets();
+          $('#tweet-text').val("");
+          $('.counter').val(140);
+        })
+      
+        .then((error) => {
+          console.log(error);
+        });
     }
   });
 
@@ -87,18 +88,19 @@ $(document).ready(function() {
     $(".new-tweet").slideToggle();
   });
 
-  const loadTweets = () => { $.ajax({
-    url: "/tweets",
-    method: "GET",
-    dataType: "json",
-    success: (tweets) => {
-      renderTweets(tweets);
-    },
-    error: (error) => {
-      console.log(error)
-    }
-  })};
+  const loadTweets = () => {
+    $.ajax({
+      url: "/tweets",
+      method: "GET",
+      dataType: "json",
+      success: (tweets) => {
+        renderTweets(tweets);
+      },
+      error: (error) => {
+        console.log(error);
+      }
+    });
+  };
 
   loadTweets();
-
 });
