@@ -1,6 +1,5 @@
 .profile {
   height: 400px;
-  margin-top: 120px;
   background-image:url('../images/az-subtle.png');
   background-color: gold;
   display: flex;
@@ -9,3 +8,29 @@
   align-items: center;
 }
 
+
+  /* Smartphones Responsive Design */
+@media only screen and (max-width: 767px) {
+
+  .profile {
+    margin-top: 120px;
+  }
+}
+  
+  /* Tablets Responsive Design */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+    
+  .profile {
+    margin-top: 120px;
+  } 
+}
+  
+  /* Desktops Responsive Design */
+@media only screen and (min-width: 1024px) {
+    
+  .profile {
+    width: 50%;
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+}
