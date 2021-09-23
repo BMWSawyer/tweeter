@@ -54,42 +54,44 @@
         <i class="fas fa-angle-double-down symbol-color bounce"></i>
       </span>
     </nav>
-    <header class="profile">
-      <div>
-          <img src="/images/profile-hex.png"> 
-      </div>
-      <!--<br>-->
-      <div>
-          <h2>BMW Sawyer</h2>
-      </div>
-  </header>
 
-    <!-- Page-specific (main) content here -->
-    <main class="container">
-      <section class="new-tweet">
-        <h2>Compose Tweet</h2>
-        <span id="error-alerts">
-          <i class="fas fa-exclamation-triangle"></i>
-          <p>
-            &nbsp;
-            &nbsp;
-            <p id="error-text"></p>
-            &nbsp;
-            &nbsp;
-          </p>
-          <i class="fas fa-exclamation-triangle"></i>
-        </span>
-        <form method="POST" action="/tweets" class="form">
-          <label for="tweet-text">What are you humming about?</label>
-          <textarea name="text" id="tweet-text"></textarea>
-          <div class="form-submission">
-            <button type="submit">Tweet</button>
-            <output name="counter" class="counter" for="tweet-text"></output>
-          </div>
-        </form>
-      </section>
-      <section class="past-tweets">
-      </section>
-    </main>
+    <div class="layout-container">
+      <header class="profile">
+        <div>
+          <img src="/images/profile-hex.png"> 
+        </div>
+        <div>
+          <h2>BMW Sawyer</h2>
+        </div>
+      </header>
+
+      <!-- Page-specific (main) content here -->
+      <main class="container">
+        <section class="new-tweet">
+          <h2>Compose Tweet</h2>
+          <span id="error-alerts">
+            <i class="fas fa-exclamation-triangle"></i>
+            <p>
+              &nbsp;
+              &nbsp;
+              <p id="error-text"></p>
+              &nbsp;
+              &nbsp;
+            </p>
+            <i class="fas fa-exclamation-triangle"></i>
+          </span>
+          <form method="POST" action="/tweets" class="form">
+            <label for="tweet-text">What are you humming about?</label>
+            <textarea name="text" id="tweet-text"></textarea>
+            <div class="form-submission">
+              <button type="submit">Tweet</button>
+              <output name="counter" class="counter" for="tweet-text"></output>
+            </div>
+          </form>
+        </section>
+        <section class="past-tweets">
+        </section>
+      </main>
+    </div>
   </body>
 </html>
