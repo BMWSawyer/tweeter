@@ -44,3 +44,12 @@ textarea {
   padding: 10px 10px 10px 30px;
   color: red;
 }
+
+
+  /* Desktops Responsive Design */
+@media only screen and (min-width: 1024px) {
+  
+  .new-tweet h2 {
+    margin-top: 0px;
+  }
+}
