@@ -40,5 +40,6 @@ These are eight screenshots of the single-page web application in use. They are 
 
 1. Fork this repository, then clone your fork of this repository.
 2. Install dependencies using the `npm install` command.
-3. Start the web server using the `npm run start` command. The app will be served at <http://localhost:8080/>.
+3. Start the web server using the `npm run local` or `npm run start` commands. The app will be served at <http://localhost:8080>.
 4. Go to <http://localhost:8080/> in your browser.
+5. Explore the app, submit tweets, resize your browser window, have fun with it!
