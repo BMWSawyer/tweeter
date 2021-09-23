@@ -1,7 +1,7 @@
 $(document).ready(function() {
   // --- our code goes here ---
   
-  $("#tweet-text").parent("form").children(".form-submission").children(".counter").val(140)
+  $("#tweet-text").parent("form").children(".form-submission").children(".counter").val(140);
   
   $("#tweet-text").on('input', function() {
     let counter = 140;
@@ -19,7 +19,5 @@ $(document).ready(function() {
     }
 
     return charCounter;
-    
   });
-
 });
